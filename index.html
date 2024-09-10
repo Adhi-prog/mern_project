@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            
+            width: 100vw;
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            overflow: auto;
+            background-color: white;
+            
+            
+        }
+
+        .section1 {
+            width: 70%;
+            height: 12rem;
+            background-color: purple;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.042),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.061),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.075),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.089),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.108),
+  100px 100px 80px rgba(0, 0, 0, 0.15)
+;
+        }
+
+        .profile-img-section {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-data {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .profile-img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+        }
+
+        .section2, .section3, .section4 {
+            width: 70%;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .section2 {
+            height: 12rem;
+        }
+
+        /* .section3 {
+            height: 20rem;
+        } */
+
+        .section4 {
+            height: 15rem;
+            font-style: italic;
+        }
+
+        .section-title {
+            color: darkblue;
+            font-weight: bold;
+            margin: 3px 0;
+        }
+
+        .ed-table {
+            width: 100%;
+            height:20px;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem;
+            border: 1px solid gray;
+        }
+
+        .companies {
+            font-weight: bold;
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="section1">
+        <div class="profile-img-section">
+            <img class="profile-img" src="C:\Users\adhib\Downloads\bio.jpg" alt="Profile Image">
+        </div>
+        <div class="profile-data">
+            <h2>Adhi</h2>
+            <p>Web Developer</p>
+            <p>Email: adhi.prog@example.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+    </div>
+
+    
+    <div class="section2">
+        <h2 class="section-title">Education</h2>
+        <table class="ed-table">
+            <tr>
+                <th>Degree</th>
+                <th>Institution</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>B.E. in Computer Science</td>
+                <td>SIET</td>
+                <td>2026</td>
+            </tr>
+            <tr>
+                <td>High School</td>
+                <td>SSBM High School</td>
+                <td>2010</td>
+            </tr>
+        </table>
+    </div>
+
+    
+    <!-- <div class="section3">
+        <h2 class="section-title">Work Experience</h2>
+        <div>
+            <p><span class="companies">ABC Corp</span> - Software Engineer (2021 - Present)</p>
+            <ul>
+                <li>Developed web applications using React and Node.js.</li>
+                <li>Collaborated with cross-functional teams to deliver high-quality products.</li>
+            </ul>
+        </div>
+        <div>
+            <p><span class="companies">XYZ Solutions</span> - Junior Developer (2019 - 2021)</p>
+            <ul>
+                <li>Worked on PHP backend systems and improved efficiency by 20%.</li>
+                <li>Assisted in database management and API development.</li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="section4">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li>Programming Languages: HTML, CSS, JavaScript, PHP</li>
+            <li>Frameworks: React, Node.js</li>
+            <li>Databases: MySQL, MongoDB</li>
+            <li>Version Control: Git, GitHub</li>
+        </ul>
+    </div>
+</body>
+</html>
+
