@@ -1,7 +1,8 @@
 // const es = require('./es');  // or './es.js'
 
 function f1(){
-    console.log("f1")
+    for(let i=0;i<10;i++)
+    console.log(i)
 }
 
 const f2=() => {

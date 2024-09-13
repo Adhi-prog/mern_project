@@ -86,6 +86,7 @@ box-shadow:
         <input type="number" id="number" placeholder="Enter your number">
     
         <input type="text" id="pass" placeholder="Enter your password">
+        <input type="number" id="age" placeholder="Enter your age">
         
         <input type="submit" class="btn" value="Register">
         </div>
@@ -110,19 +111,30 @@ box-shadow:
         let email=document.getElementById("email").value;
         let number=document.getElementById("number").value;
         let pass=document.getElementById("pass").value;
-        console.log(name);
-        console.log(email);
-        console.log(number);
-        console.log(pass);
+        let age=document.getElementById("age").value;
+        if(name!=="" && pass!=="" && pass!==null)
+    {
+        console.log("Successsss");
+    }
+    else
+    {
+        console.log("Error!!!!");
+    }
+        // console.log(name);
+        // console.log(email);
+        // console.log(number);
+        // console.log(pass);
         const data={
             username:name,
             usermail:email,
             userphone:number,
-            userpassword:pass
+            userpassword:pass,
+            usertype:age>=18 ? 'major' : 'minor'
 
         }
-        const { username,usermail,userphone,userpassword}=data
-        console.log(usermail)
+        const { username,usermail,userphone,userpassword,usertype}=data
+        console.log(username,usertype)
+        
         
     }
     let data1=[1,2,3,4,5]
