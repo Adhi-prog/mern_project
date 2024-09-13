@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        .forms{
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+           
+            /* margin-top: 70px;
+            margin-left: 50px;
+            margin-right: 50px; */
+            margin: 50px auto;
+            /* margin-left: 150px;
+            margin-right: 150px;
+            margin-top: 150px; */
+            padding:20px;
+            width:100vh;
+            height: 50vh;
+            background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,51,121,1) 35%, rgba(0,212,255,1) 100%);
+box-shadow:
+  2px 2px 1.6px rgba(0, 0, 0, 0.017),
+  4.5px 4.5px 3.6px rgba(0, 0, 0, 0.024),
+  7.9px 7.9px 6.3px rgba(0, 0, 0, 0.03),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  19.3px 19.3px 15.5px rgba(0, 0, 0, 0.04),
+  30.1px 30.1px 24.1px rgba(0, 0, 0, 0.046),
+  50px 50px 40px rgba(0, 0, 0, 0.053),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+
+            
+        }
+        .btn:hover{
+            background-color: aqua;
+        }
+        .frm{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        
+            
+        }
+        input{
+            padding: 5px;
+        }
+        @media only screen and (max-width:600px){
+                .forms{
+                    height:100vh;
+                }
+                
+            }
+      
+    </style>
+</head>
+
+<body>
+    
+    <div class="forms">
+    <strong><h1 style="color: brown;">Login</h1></strong>
+    <br>
+    
+    <form onsubmit=" return formdata()">
+        <div class="frm">
+        
+        
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <input type="text" id="email" placeholder="Enter your email">
+        
+        <input type="number" id="number" placeholder="Enter your number">
+    
+        <input type="text" id="pass" placeholder="Enter your password">
+        
+        <input type="submit" class="btn" value="Register">
+        </div>
+        
+        
+
+
+
+
+    
+    </form>
+    </div>
+</body>
+<script>
+    
+    // let email=document.getElementById("email");
+    // let number=document.getElementById("number");
+    // let pass=document.getElementById("pass");
+    function formdata(){
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let number=document.getElementById("number").value;
+        let pass=document.getElementById("pass").value;
+        console.log(name);
+        console.log(email);
+        console.log(number);
+        console.log(pass);
+        
+    }
+</script>
+
+</html>
