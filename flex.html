@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Flexbox</title>
         <style>
             *
             {
                 margin: 0px;
             }
+           
             .container{
-                display:flex;
+                /* display:flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -16,17 +18,31 @@
                 width:100vw;
                 height: 100vh;
                 width:100vw;
-                gap:3rem;
+                gap:3rem; */
+                display: grid;
+                grid-template-columns: 300px 300px 300px;
+                grid-template-rows: 300px 300px 300px;
+                grid-gap: 5%;
+                height: 100vh;
+                width:100vh;
+            
+
+
+                
+
+            
             }
             .box {
-    height: 10rem;
-    width: 10rem;
+    /* height: 10rem;
+    width: 10rem; */
     font-size: 3rem;
     font-weight: bold;
     color: white;
 }
             .red{
                 background-color: red;
+                grid-row: 2/-3;
+                grid-column:2/3;
 
             }
             .orange{
@@ -34,6 +50,35 @@
             }
             .blue{
                 background-color: blue;
+                grid-row: 3/4;
+                grid-column:-4/-3;
+            }
+            @media only screen and (max-width:600px){
+                .orange{
+                    background-color:black;
+                }
+                
+            }
+            @keyframes myanimation{
+                from{
+                    transform:translateX(-100%);
+                    rotate:90deg; 
+                    scale: 50%; 
+                }
+                to{
+                    transform:translateX(30%);
+                    rotate:180deg;
+                    scale: 100%;
+
+                }
+                
+            }
+            .icons{
+                animation: 12s myanimation ease-in;
+            }
+            .blue:hover{
+                background-color: orange;
+                transition: 0.6s background-color ease-in;
             }
 
         </style>
@@ -45,6 +90,10 @@
             <div class="box orange">Orange</div>
             <div class="box blue">Blue</div>
 
+
+        </div>
+        <div class="icons">
+        <i class="fa-brands fa-linkedin-in"></i>
         </div>
     </body>
 </html>

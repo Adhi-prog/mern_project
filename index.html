@@ -1,216 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Resume - Adithya RS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link to Font Awesome Icons -->
     <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
         body {
-            
-            width: 100vw;
-            background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: start;
-            align-items: center;
-            overflow: auto;
-            background-color: white;
-            
-            
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .section1 {
-            width: 70%;
-            height: 12rem;
-            background-color: purple;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            box-shadow:
-  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.042),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.061),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.075),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.089),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.108),
-  100px 100px 80px rgba(0, 0, 0, 0.15)
-;
+        .resume {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .profile-img-section {
-            width: 40%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        header {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .profile-data {
-            width: 40%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+        header .profile h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
 
-        .profile-img {
-            height: 8rem;
-            width: 8rem;
-            border-radius: 50%;
+        header .profile p {
+            margin: 5px 0;
         }
 
-        .section2, .section3, .section4 {
-            width: 70%;
-        
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
+        .section {
+            margin-bottom: 20px;
         }
 
-        .section2 {
-            height: 12rem;
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.5em;
         }
 
-        /* .section3 {
-            height: 20rem;
-        } */
-
-        .section4 {
-            height: 15rem;
-            font-style: italic;
+        .job, .education {
+            margin-bottom: 15px;
         }
 
-        .section-title {
-            color: darkblue;
-            font-weight: bold;
-            margin: 3px 0;
+        .job h3, .education h3 {
+            margin: 0;
+            font-size: 1.2em;
         }
 
-        .ed-table {
+        .job ul, .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .resume {
+                padding: 15px;
+            }
+
+            header .profile h1 {
+                font-size: 2em;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+
+            .job h3, .education h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .profile h1 {
+                font-size: 1.5em;
+            }
+
+            header .profile p {
+                font-size: 0.9em;
+            }
+
+            .section h2 {
+                font-size: 1.2em;
+            }
+
+            .job h3, .education h3 {
+                font-size: 1em;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
+        .centered-image {
+            display: block;
+            margin: 0 auto;
             width: 100%;
-            height:20px;
-            border: 1px solid gray;
-            border-collapse: collapse;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
-
-        th, td {
-            padding: 1rem;
-            border: 1px solid gray;
-        }
-
-        .companies {
-            font-weight: bold;
-            color: aquamarine;
-        }
-        .section6 {
-            width: 70%;
-            height: 2rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            font-weight: bold;
-
-            background: #8E2DE2;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-     
-</head>
-
-<body>
-    
-    <div class="section1">
-        <div class="profile-img-section">
-            <img class="profile-img" src="C:\Users\adhib\Downloads\bio.jpg" alt="Profile Image">
-        </div>
-        <div class="profile-data">
-            <h2>Adhi</h2>
-            <p>Web Developer</p>
-            <p>Email: adhi.prog@example.com</p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-    </div>
 
     
-    <div class="section2">
-        <h2 class="section-title">Education</h2>
-        <table class="ed-table">
-            <tr>
-                <th>Degree</th>
-                <th>Institution</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>B.E. in Computer Science</td>
-                <td>SIET</td>
-                <td>2026</td>
-            </tr>
-            <tr>
-                <td>High School</td>
-                <td>SSBM High School</td>
-                <td>2010</td>
-            </tr>
-        </table>
+        .contact-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-    </div>
+        .contact-icons a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
 
-    
-    <!-- <div class="section3">
-        <h2 class="section-title">Work Experience</h2>
-        <div>
-            <p><span class="companies">ABC Corp</span> - Software Engineer (2021 - Present)</p>
-            <ul>
-                <li>Developed web applications using React and Node.js.</li>
-                <li>Collaborated with cross-functional teams to deliver high-quality products.</li>
-            </ul>
-        </div>
-        <div>
-            <p><span class="companies">XYZ Solutions</span> - Junior Developer (2019 - 2021)</p>
-            <ul>
-                <li>Worked on PHP backend systems and improved efficiency by 20%.</li>
-                <li>Assisted in database management and API development.</li>
-            </ul>
-        </div>
-    </div> -->
-    <div class="section4">
-        <h2 class="section-title">Skills</h2>
-        <ul>
-            <li>Programming Languages: HTML, CSS, JavaScript, PHP</li>
-            <li>Frameworks: React, Node.js</li>
-            <li>Databases: MySQL, MongoDB</li>
-            <li>Version Control: Git, GitHub</li>
-        </ul>
+        .contact-icons a:hover {
+            color: #0073b1; 
+        }
+
         
+        .contact-icons a[href^="tel"]:hover {
+            color: #4caf50; 
+        }
+
+        .contact-icons a[href^="mailto"]:hover {
+            color: #f44336; 
+        }
+
+        .contact-icons a[href^="https://www.linkedin.com"]:hover {
+            color: #0077b5; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <header>
+            <section class="section">
+                <img src="profile.jpg.jpeg" alt="Resume Design" style="display:flex; height:8rem;width:8rem; border-radius: 50%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); margin-bottom: 20px;justify-content: center;text-align: center;" class="centered-image">
+            </section>
+            <div class="profile">
+                <h1>Adithya RS</h1>
+                <p>CSE Student | Full-Stack Developer | MERN Stack | Python Enthusiast</p>
+                <p>Email: <a href="mailto:adithyars22cse@srishakthi.ac.in">adithyars22cse@srishakthi.ac.in</a> | Phone: <a href="tel:+918778908418">8778908418</a> | Location: Coimbatore, India</p>
+            </div>
+
+            
+            <div class="contact-icons">
+                <a href="tel:+918778908418" title="Call">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="mailto:adithyars22cse@srishakthi.ac.in" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/adithya-rs-175a44274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p>Currently pursuing a Bachelor's degree in Computer Science Engineering with a strong interest in full-stack development and Python. Proven ability to develop and deploy scalable applications. Active participant in hackathons and coding competitions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Full-Stack Development</h3>
+                <ul>
+                    <li>Developed and maintained web applications using MERN stack.</li>
+                    <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                    <li>Optimized application performance and resolved bugs.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Python Development</h3>
+                <ul>
+                    <li>Assisted in the development of internal tools using Python</li>
+                    <li>Participated in code reviews and contributed to documentation.</li>
+                    <li>Supported team members in troubleshooting and debugging issues.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <h3>Bachelor of Science in Computer Science Engineering</h3>
+                <p><strong>Sri Shakthi Institute Of Engineering And Technology</strong> - Coimbatore, India</p>
+                <p>Expected Graduation: May 2026</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript (React, Node.js)</li>
+                <li>Python (Django, Flask)</li>
+                <li>HTML/CSS</li>
+                <li>Database Management (MongoDB, SQL)</li>
+                <li>Version Control (Git)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>JavaScript Certification - Issued by Udemy</li>
+                <li>Python Certification - Issued by Udemy</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Jewellery Management System</strong> - Developed using PHP.</li>
+                <li><strong>Image-to-Text Converter</strong> - Built using Python (OCR and Pytesseract).</li>
+            </ul>
+        </section>
     </div>
-    <div class="section6"></div>
-        <a href="tel:+91 8778908418">
-            <i class="fa-solid fa-phone text-white"></i>
-        </a>
-        <a href="mailto:adithyars22cse@srishakthi.ac.in">
-            <i class="fa-solid fa-envelope text-white"></i>
-        </a>
-        <a href="https://www.linkedin.com/" target="_blank">
-            <i class="fa-brands fa-linkedin-in text-white"></i>
-        </a>
-    </div>
-    
 </body>
 </html>
-
