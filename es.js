@@ -38,7 +38,7 @@ async function API() {
     try{
     const response=await fetch('https://66e526d85cc7f9b6273c6a17.mockapi.io/users')
     const data=await response.json()
-    console.table(data);
+    console.log(data);
     return data
     }
     catch(error)
